@@ -64,3 +64,19 @@ test = new Logger({
   
 });
 ```
+
+***using logger for project***
+```
+test.error(error,message); 
+
+test.info(info);
+
+test.warning(warning, {
+  test: 456,
+  test2: {
+    test: 456,
+    test3: {
+      test: 456
+    }
+  }
+});```
