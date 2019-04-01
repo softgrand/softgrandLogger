@@ -12,7 +12,7 @@ Show alerts in red
 
 Can be configured to save logs or not
 
-**config using logger
+**config using logger**
 ```
 let SoftgrandLogger = require('../index');
 let Logger = new SoftgrandLogger({});
@@ -79,4 +79,4 @@ test.warning(warning, {
       test: 456
     }
   }
-});```
+});
