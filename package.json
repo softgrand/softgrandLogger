@@ -1,0 +1,45 @@
+{
+  "name": "softgrandLogger",
+  "private": true,
+  "version": "1.1.0",
+  "description": "logger",
+  "main": "./index.js",
+  "release": [
+    {
+      "1.0.0": [
+        {
+          "title": "feature",
+          "description": "نمایش خطاها"
+        },
+        {
+          "title": "improvment",
+          "description": "ذخیره لاگها براساس نوع پیام"
+        }
+      ],
+      "1.1.0": [
+        {
+          "title": "feature",
+          "description": "ذخیره لاگها در مونگو و فایل سیستم"
+        }
+      ]
+    }
+  ],
+  "author": {
+    "name": "reza bojnrdi",
+    "email": "rezabojnordi2012@gmail.com",
+    "url": ""
+  },
+  "maintainers": [
+    {
+      "name": "A eghamat developer",
+      "email": "",
+      "url": ""
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "caller-id": "^0.1.0",
+    "mongodb": "^3.1.13",
+    "q": "^1.5.1"
+  }
+}
