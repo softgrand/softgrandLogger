@@ -63,6 +63,7 @@ test = new Logger({
   },
   
 });
+
 ```
 
 ***using logger for project***
@@ -80,3 +81,4 @@ test.warning(warning, {
     }
   }
 });
+```
