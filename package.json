@@ -41,5 +41,11 @@
     "caller-id": "^0.1.0",
     "mongodb": "^3.1.13",
     "q": "^1.5.1"
+<<<<<<< HEAD
+  },
+  "dependencies": {
+    "mongoose": "^5.6.4"
+=======
+>>>>>>> c8c4131f0c49f56185357cc04125fc9b1ef9ece7
   }
 }
