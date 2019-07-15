@@ -1,11 +1,8 @@
+# log-server
 # softgrandLogger
 Logger Interface for use in Node JS projects
-
-<<<<<<< HEAD
 <img src="http://uupload.ir/files/bkv5_softgrand.png"></img>
 
-=======
->>>>>>> c8c4131f0c49f56185357cc04125fc9b1ef9ece7
 ## Lager Features:
 Logging in the Mongo database
 
@@ -19,12 +16,10 @@ Can be configured to save logs or not
 
 **config using logger**
 ```
-<<<<<<< HEAD
 let softgrandLogger = require('../index');
 let Logger = new softgrandLogger({});
-
 test = new Logger({
-  model: {
+model: {
     info: {
       type: JSON
     },
@@ -46,34 +41,13 @@ test = new Logger({
     additionalInfo: {
       type: JSON
     }
-    
-  },
-=======
-let SoftgrandLogger = require('../index');
-let Logger = new SoftgrandLogger({});
-let mongoInterfaceConfig = {
-  global: {},
-  instance: {
-    host: '127.0.0.1',
-    port: 27017,
-    dbName: 'test',
-    dbUser: '',
-    dbPass: '',
-    strictMode: false
-  }
-}
-test = new Logger({
->>>>>>> c8c4131f0c49f56185357cc04125fc9b1ef9ece7
+    },
   levelConfig: {
     warning: {
       save: true,
       color: 'yellowBg',
       show: true,
-<<<<<<< HEAD
-      viewPath: true
-=======
       viewPath:true
->>>>>>> c8c4131f0c49f56185357cc04125fc9b1ef9ece7
     },
     error: {
       save: false,
@@ -97,54 +71,20 @@ test = new Logger({
 
     },
     mongoDB: {
-<<<<<<< HEAD
-      enabled: false
-     // partMongoInterfaceConfig: mongoInterfaceConfig
-    }
-  }
-
-});
-
-
-
-=======
-      enabled: true,
-      partMongoInterfaceConfig:mongoInterfaceConfig
+      enabled: true
     }
   },
   
 });
-
->>>>>>> c8c4131f0c49f56185357cc04125fc9b1ef9ece7
 ```
 
 ***using logger for project***
 ```
-<<<<<<< HEAD
-
-var e = {
-  info: {
-    sourceType: 'code',
-    sourceName: '1'
-  },
-  message: {
-    en: 'text message',
-    fa: 'متن فارسی'
-  }
-};
-
-
-//test.error(e,'reza');
-//test.info(e,"yes of cource");
-//test.info(e);
-test.warning(e, {
-=======
 test.error(error,message); 
 
 test.info(info);
 
 test.warning(warning, {
->>>>>>> c8c4131f0c49f56185357cc04125fc9b1ef9ece7
   test: 456,
   test2: {
     test: 456,
@@ -153,7 +93,3 @@ test.warning(warning, {
     }
   }
 });
-<<<<<<< HEAD
-=======
-```
->>>>>>> c8c4131f0c49f56185357cc04125fc9b1ef9ece7
