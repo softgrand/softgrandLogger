@@ -1,6 +1,8 @@
 # softgrandLogger
 Logger Interface for use in Node JS projects
 
+<img src="http://uupload.ir/files/bkv5_softgrand.png"></img>
+
 ## Lager Features:
 Logging in the Mongo database
 
@@ -14,26 +16,40 @@ Can be configured to save logs or not
 
 **config using logger**
 ```
-let SoftgrandLogger = require('../index');
-let Logger = new SoftgrandLogger({});
-let mongoInterfaceConfig = {
-  global: {},
-  instance: {
-    host: '127.0.0.1',
-    port: 27017,
-    dbName: 'test',
-    dbUser: '',
-    dbPass: '',
-    strictMode: false
-  }
-}
+let softgrandLogger = require('../index');
+let Logger = new softgrandLogger({});
+
 test = new Logger({
+  model: {
+    info: {
+      type: JSON
+    },
+    message: {
+      type: JSON
+    },
+    type: {
+      type: String
+    },
+    time: {
+      type: JSON
+    },
+    function: {
+      type: JSON
+    },
+    stack: {
+      type: JSON
+    },
+    additionalInfo: {
+      type: JSON
+    }
+    
+  },
   levelConfig: {
     warning: {
       save: true,
       color: 'yellowBg',
       show: true,
-      viewPath:true
+      viewPath: true
     },
     error: {
       save: false,
@@ -57,21 +73,36 @@ test = new Logger({
 
     },
     mongoDB: {
-      enabled: true,
-      partMongoInterfaceConfig:mongoInterfaceConfig
+      enabled: false
+     // partMongoInterfaceConfig: mongoInterfaceConfig
     }
-  },
-  
+  }
+
 });
+
+
+
 ```
 
 ***using logger for project***
 ```
-test.error(error,message); 
 
-test.info(info);
+var e = {
+  info: {
+    sourceType: 'code',
+    sourceName: '1'
+  },
+  message: {
+    en: 'text message',
+    fa: 'متن فارسی'
+  }
+};
 
-test.warning(warning, {
+
+//test.error(e,'reza');
+//test.info(e,"yes of cource");
+//test.info(e);
+test.warning(e, {
   test: 456,
   test2: {
     test: 456,
