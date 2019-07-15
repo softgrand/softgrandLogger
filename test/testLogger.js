@@ -1,23 +1,37 @@
-let SoftgrandLogger = require('../index');
-let Logger = new SoftgrandLogger({});
-let mongoInterfaceConfig = {
-  global: {},
-  instance: {
-    host: '127.0.0.1',
-    port: 27017,
-    dbName: 'test',
-    dbUser: '',
-    dbPass: '',
-    strictMode: false
-  }
-}
+let softgrandLogger = require('../index');
+let Logger = new softgrandLogger({});
+
 test = new Logger({
+  model: {
+    info: {
+      type: JSON
+    },
+    message: {
+      type: JSON
+    },
+    type: {
+      type: String
+    },
+    time: {
+      type: JSON
+    },
+    function: {
+      type: JSON
+    },
+    stack: {
+      type: JSON
+    },
+    additionalInfo: {
+      type: JSON
+    }
+    
+  },
   levelConfig: {
     warning: {
       save: true,
       color: 'yellowBg',
       show: true,
-      viewPath:true
+      viewPath: true
     },
     error: {
       save: false,
@@ -41,13 +55,12 @@ test = new Logger({
 
     },
     mongoDB: {
-      enabled: true,
-      partMongoInterfaceConfig:mongoInterfaceConfig
+      enabled: false
+     // partMongoInterfaceConfig: mongoInterfaceConfig
     }
-  },
-  
-});
+  }
 
+});
 
 
 var e = {
